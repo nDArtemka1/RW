@@ -1,0 +1,226 @@
+@font-face {
+  font-family: Gilroy-Bold;
+  font-style: normal;
+  font-weight: 600;
+  src: local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gilroy-HeavyItalic;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Gilroy-HeavyItalic"), url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gilroy-Medium;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Medium"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gilroy-Regular;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.woff2") format("woff2");
+}
+:root {
+  --GilroyBold: "Gilroy-Bold",Arial, sans-serif;
+  --GilroyHeavyItalic: "Gilroy-HeavyItalic", sans-serif;
+  --GilroyMedium: "Gilroy-Medium", sans-serif;
+  --GilroyRegular: "Gilroy-Regular", sans-serif;
+  --white: #fff;
+  --black: #22282b;
+  --gray: #63626d;
+  --lightGray: #e4e4e4b8;
+  --darkBlue: #2A254B;
+  --lightBlue: #55bdd7;
+  --orange: #ffc400;
+  --green: #00bd15;
+  --transparent: rgba(255, 255, 255, 0);
+  --rose: #f7726e;
+  --red: red;
+  --lightOrange: #DFD0C4;
+  --brown: #624B32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+body, button {
+  font-family: var(--GilroyRegular);
+  color: var(--black);
+  font-size: 17px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+li, a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  list-style: none;
+  color: var(--black);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+}
+.main-title {
+  width: 100%;
+  font-size: 30px;
+  position: relative;
+  margin: 40px 0;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 150px;
+}
+.main-title-description {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.main-title span {
+  position: relative;
+}
+.main-title span:before {
+  width: 40px;
+  height: 29px;
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: -50px;
+  background-image: url("http://royalw31.beget.tech/images/crown.png");
+}
+
+.main-title:before,
+.main-title:after {
+  background: var(--brown);
+  width: 10%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  bottom: 50%;
+}
+
+.main-title:before {
+  left: 0;
+}
+
+.main-title:after {
+  right: 0;
+}
+
+@media only screen and (min-width: 1101px) {
+  .main-title {
+    padding: 0px 170px;
+  }
+  .main-title span:before {
+    bottom: 13%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  .main-title {
+    padding: 0px 170px;
+  }
+  .main-title span:before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+  .main-title {
+    padding: 0px 120px;
+  }
+  .main-title span:before {
+    display: none;
+  }
+  .main-title:before,
+  .main-title:after {
+    background: var(--brown);
+    width: 17%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 426px) {
+  .main-title {
+    padding: 0 10px;
+    font-size: 22px;
+  }
+  .main-title span:before {
+    display: none;
+  }
+  .main-title:before,
+  .main-title:after {
+    background: var(--brown);
+    width: 60%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: -30%;
+  }
+}/*# sourceMappingURL=global.css.map */
